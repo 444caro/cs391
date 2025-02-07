@@ -44,8 +44,8 @@ function power(){
 }
 
 // Function to erase the contents of the 2 input boxes and the output box
-function clear(){
-    document.getElementById("num1").value = "";
-    document.getElementById("num2").value = "";
-    document.getElementById("output").innerHTML = "";
+function clearBoxes(){
+    document.getElementById("num1").value = " ";
+    document.getElementById("num2").value = " ";
+    document.getElementById("output").innerHTML = " ";
 }

@@ -8,51 +8,72 @@
        <title> Projects | Resume </title>
    </head>
    <body>
-       <!-- HEADER STARTS HERE -->
-       <!-- HEADER ENDS HERE -->
+        <div id = "page-wrapper">
+        <!-- HEADER STARTS HERE -->
+            <header>
+                <h1> Caroline Muscara </h1>
+                <p> My Online Resume </p>
+            </header>
+        <!-- HEADER ENDS HERE -->
+            <div id = "container-layout">
+            <!-- NAVIGATION STARTS HERE -->
+                <nav>
+                    <ul class = "nav-ul">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="experience.html">Experience </a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </nav>
 
-       <!-- NAVIGATION STARTS HERE -->
-        <nav>
-           <ul class = "nav-ul">
-               <li><a href="index.html">Home</a></li>
-               <li><a href="projects.html">Projects</a></li>
-               <li><a href="education.html">Education</a></li>
-               <li><a href="experience.html">Experience </a></li>
-               <li><a href="skills.html">Skills</a></li>
-               <li><a href="references.html">References</a></li>
-           </ul>
-        </nav>
+            <!-- NAVIGATION ENDS HERE -->
 
-       <!-- NAVIGATION ENDS HERE -->
+            <!-- MAIN CONTENT STARTS HERE -->
+                <main>
+                    <h2> Projects </h2>
+                    <div id = "main-text">
+                        <p> 
+                            Here are some of the projects I have worked on in the past with their 
+                            corresponding Github links. 
+                            Below that is my latest project, a calculator. 
+                        </p>
+                    </div>
 
-       <!-- MAIN CONTENT STARTS HERE -->
-        <main>
-            <div id = "projects">
-            <!-- PUT OTHER PROJECTS HERE -->
+                    <div id = "projects">
+                        <ul>
+                            <li><p>A concert finder web application called <a href = "https://github.com/ivannadels/CS411-ConcertFinder"> Concert Compass</a>  that helps users locate concerts based on artist preferences and location using Java, Python, HTML/CSS, MongoDB, and APIs.</p></li>
+                            <li><p><a href = "https://github.com/rowanwhelan/Boston-Budget-Project">Boston Budgetary Analysis Project </a> where my group observed historical trends in Boston's budget data and created expectations for the upcoming fiscal year. We successfully uncovered patterns in Boston's budget allocation and spending strategies. </p></li>
+                            <li><p>A website called <a href = "">BloomBoard</a> where florists can share their arrangements and flower details with other florists. </p></li>
+                        </ul>
+                    <!-- PUT OTHER PROJECTS HERE -->
+                    </div>
+
+                    <div id = "calculator">
+                        <h2> Calculator </h2>
+                        <label for = "num1"> Give me a number: </label><input id = "num1"><br>
+                        <label for = "num2"> Give me another number: </label><input id = "num2"><br>
+                        <button id = "addition" onclick = "addition()"> + </button>
+                        <button id = "subtraction" onclick = "subtraction()"> - </button>
+                        <button id = "multiplication" onclick = "multiplication()"> * </button>
+                        <button id = "division" onclick = "division()"> / </button>
+                        <button id = "power" onclick = "power()"> ** </button>
+                        <button id = "clearBox" onclick = "clearBox()"> Clear </button>
+                        <h3 id = "output"> </h3>
+                        <script src = "calculator.js"></script>
+                    </div>
+                </main>
+            <!-- MAIN CONTENT ENDS HERE -->
             </div>
 
-            <div id = "calculator">
-                <h1> Calculator </h1>
-                <label for = "num1"> Give me a number: </label><input id = "num1">
-                <label for = "num2"> Give me another number: </label><input id = "num2">
-                <button id = "addition" onclick = "addition()"> + </button>
-                <button id = "subtraction" onclick = "subtraction()"> - </button>
-                <button id = "multiplication" onclick = "multiplication()"> * </button>
-                <button id = "division" onclick = "division()"> / </button>
-                <buttom id = "power" onclick = "power()"> ** </button>
-                <button id = "clear" onclick = "clear()"> Clear </button>
-                <h3 id = "output"> </h3>
-                <script src = "calculator.js"></script>
-            </div>
-        </main>
-       <!-- MAIN CONTENT ENDS HERE -->
 
+        <!-- FOOTER STARTS HERE -->
+            <footer>
+                <p> All Rights Reserved by Caroline Muscara <a href = "credits.html"> Credits</a> &copy;</p>
+            </footer>
+        <!-- FOOTER ENDS HERE -->
+         </div>
 
-       <!-- FOOTER STARTS HERE -->
-        <footer>
-           <p> All Rights Reserved by Caroline Muscara <a href = "credits.html"> Credits</a> &copy;</p>
-        </footer>
-       <!-- FOOTER ENDS HERE -->
-
-   </body>
+    </body>
 </html>

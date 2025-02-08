@@ -1,9 +1,51 @@
+/* GLOBAL STYLES */
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 }
 body{
     padding: 2vh 2vw;
+}
+header{
+    /*Header styles*/
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 2vw;
+    background-color: darkolivegreen;
+    color: rgb(226, 200, 167);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    height: 100vh;
+    background-color: rgb(226, 200, 167);
+    padding-bottom: 0;
+}
+#page-wrapper{
+    /*Centering the page*/
+    width: 95vw;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#container-layout{
+    /*Two column container layout*/
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: rgb(226, 200, 167);
+}
+
+
+/* TEXT STYLES */
+h1{
+    font-size: calc(20px + 2vw);
+    letter-spacing: 0.2em;
 }
 h2{
     text-align: center;
@@ -12,33 +54,21 @@ h2{
     padding: 2vh 0;
     letter-spacing: 0.2em;
 }
-h1{
-    font-size: calc(20px + 2vw);
-    letter-spacing: 0.2em;
+h3{
+    color: rgb(34, 42, 19);
+    font-size: calc(7px + 1.5vw);
 }
 p{
     font-size: calc(5px + 1.5vw);
     margin: 2vh 1.5vw;
-    line-height: 15px +1vh;
-    
-    
+    line-height: 15px +1vh; 
 }
 #main-text{
     color: rgb(34, 42, 19);
 }
-#calculator{
-    color: rgb(34, 42, 19);  
-    font-size: calc(5px + 1.5vw);
-    margin: 2vh 2vw;
-    line-height: 15px +1vh;
-    text-align: center;
-}
-#projects{
-    color: rgb(34, 42, 19);  
-    font-size: calc(5px + 1.5vw);
-    margin: vh vw;
-    line-height: 15px +1vh;
-}
+
+
+/* LINK STYLES */
 a{
     color: rgb(34, 42, 19);  
     text-decoration: underline dotted;
@@ -48,47 +78,48 @@ a:hover{
 }
 
 
-/*Centering the page*/
-#page-wrapper{
-    width: 97vw;
-    margin: 0 auto;
+/* NAVIGATION STYLES */
+nav{
+    width: 30%;
 }
-
-/*Header starts*/
-header{
+nav ul{
     display: flex;
     flex-direction: column;
-    padding: 2vh 2vw;
-    background-color: darkolivegreen;
+    justify-content: space-evenly;
+    background-color: rgb(125, 151, 125);
+    font-size: calc(2px + 2vw);
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+}
+nav li{
+    font-size: calc(5px + 1.5vw);
+    width: 90%;
+    background-color:darkolivegreen;
+    padding: 2vh 0;
+    margin: 5vh auto;
+
+}
+nav a{
+    text-decoration: underline dotted;
     color: rgb(226, 200, 167);
 }
-/*Header ends*/
+nav a:hover{
+    text-decoration: underline solid;
+}
 
-/*Two column container starts:*/
-#container-layout{
-    width: 100%;
+/* FOOTER STYLES */
+footer{
+    background-color: darkolivegreen;
+    color: rgb(226, 200, 167);
+    text-align: center;
+    padding: 1vh 1vw;
     display: flex;
-    flex-direction: row;
-    position: relative;
-    background-color: rgb(151, 171, 151);
-}
-#education-container-layout{
-    /* 2 column layout */
-
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-
+    justify-content: space-evenly;
 }
 
-#education-images{
-    max-width: 40%;
-    padding-left:2vw;
-}
-#highschool-logo, #university-logo{
-    max-width: 75%;
-}
+
+/* HOME PAGE SPECIFIC STYLES */
 #home-container-layout{
     /* 2 column layout */
     width: 100%;
@@ -101,42 +132,175 @@ header{
     padding: 3vh 3vw;
 }
 
-nav{
-    width: 30%;
-}
 
-nav ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgb(125, 151, 125);
-    font-size: calc(2px + 2vw);
+/* PROJECTS PAGE SPECIFIC STYLES */
+#projects{
+    color: rgb(34, 42, 19);  
+    font-size: calc(5px + 1.5vw);
+    margin: vh vw;
+    line-height: 15px +1vh;
+}
+#calculator{
+    color: rgb(34, 42, 19);  
+    font-size: calc(5px + 1.5vw);
+    margin: 2vh 2vw;
+    line-height: 15px +1vh;
     text-align: center;
-    list-style: none;
-    padding-left: 0;
+}
+#calculator input{
+    margin: 1vh 1vw;
+}
+#calculator button{
+    margin: 1vh 1vw;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 50%;
+    background-color:  rgb(125, 151, 125);
+    color: rgb(34, 42, 19);
+    font-weight: bolder;
+}
+#output{
+    color: darkolivegreen;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+    font-size: calc(20px + 5vw);
+    letter-spacing: 0.2em;
+    margin: 2vh 2vw;
+    padding: 1vh 1vw;
+    text-align: center;
 }
 
-nav li{
-    font-size: calc(3px + 3vw);
-    width: 90%;
-    background-color:darkolivegreen;
-    padding: 2vh 0;
-    margin: 5vh auto;
-    font-size: calc(7px + 1.5vw);
-}
 
-
-nav a{
-    text-decoration: underline dotted;
-    color: rgb(226, 200, 167);
-}
-nav a:hover{
-    text-decoration: underline solid;
-}
-
-main{
+/* EDUCATION PAGE SPECIFIC STYLES */
+#education-container-layout{
+    /* 2 column layout for images and info*/
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    width:70%;
-    background-color: rgb(226, 200, 167);
+    flex-direction: row;
+    position: relative;
+}
+#education-images{
+    max-width: 40%;
+    padding-left:2vw;
+}
+#highschool-logo, #university-logo{
+    max-width: 75%;
+}
+
+
+/* WORK AND VOLUNTEER EXPERIENCE SPECIFIC STYLES */
+.experience-past{
+    margin: 1vh 1vw;
+    padding: 1.5vh 1.5vw;
+    border: 2px solid darkolivegreen;
+}
+.experience-dates{
+    color: rgb(78, 96, 79);
+    letter-spacing: 0.1em;
+    margin: 1vh 1vw;
+    padding: 1vh 1vw;
+    text-align: center;
+    font-size: calc(2px + 1.4vw);
+}
+.experience-description{
+    color: rgb(34, 42, 19);
+    margin: 1vh 0;
+    padding: 0;
+    font-size: calc(3px + 1.4vw);
+}
+
+
+/* CONTACT PAGE SPECIFIC STYLES */
+#contact-container-layout{
+    /* 2 column layout */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.contact-info{
+    max-width: 25%;
+}
+.contact-info img{
+    max-width: 75%;
+    padding: 1.5vh 1.5vw;
+    margin: 1vh 1vw;
+}
+
+
+/* RESPONSIVE DESIGN */
+/* Media Query for Screens Smaller than 900px */
+@media screen and (max-width: 900px) {
+    /* Global Styles */
+    body {
+        padding: 2vh 5vw;
+    }
+    #page-wrapper {
+        width: 90vw;
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Header */
+    header {
+        text-align: center;
+    }
+
+    /* Main Content */
+    main {
+        width: 100%;
+    }
+}
+
+/* Media Query for Screens Smaller than 750px */
+@media screen and (max-width: 750px) {
+    /* Navigation */
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+
+    /* Header */
+    header {
+        text-align: center;
+    }
+
+    /* Container Layout */
+    #container-layout {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    /* Main Content */
+    main {
+        width: 100%;
+    }
+}
+
+/* Media Query for Screens Bigger than 750px */
+@media screen and (min-width: 751px) {
+    /* Navigation */
+    nav {
+        width: 30%;
+
+    }
+    nav ul {
+        flex-direction: column;
+    }
+
+    /* Header */
+    header {
+        text-align: left;
+    }
+}
+
+/* Media Query for Screens Bigger than 1000px */
+@media screen and (min-width: 1001px) {
+    main {
+        width: 70%;
+    }
 }

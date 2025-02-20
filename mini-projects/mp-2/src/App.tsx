@@ -3,79 +3,43 @@ import styled from "styled-components";
 import {useEffect, useState} from "react";
 import {Dog} from "./interfaces/Dog.ts";
 
-
+const ParentDiv=styled.div`
+    width: 80vw;
+    margin: auto;
+    border: 5px darkgoldenrod solid;
+`;
 
 export default function App() {
   const [data, setData] = useState<Dog[]>([]);
-  const [breeds, setBreeds] = useState<string[]>([]);
-  const [selectedBreed, setSelectedBreed] = useState("");
-
-  useEffect(()=>{
-    async function fetchData(){
-      const rawData= await fetch("PLACEHOLDER");
-      const {results}= await rawData.json();
-      setData(results);
-
-    }
-    fetchData().then(()=>console.log("yippee"))
-    .catch((e)=>console.log("this happened",e));
-  },[data.length]);
 
   // Fetch 5 random dog images 
   useEffect(() => {
     async function fetchRandomDogs(){
-      const rawData = await fetch("");
-      const {results} : {results: Dog[]} = await rawData.json();
-      setData(results)
+      const rawData = await fetch("https://dog.ceo/api/breeds/image/random/20");
+      const results = await rawData.json();
+      const formattedDogs: Dog[] = results.message.map((dog: string, index: number) => {
+        const parts = dog.split("/");
+        const breedParts = parts[4].split("-");
+        const breed = breedParts.length > 1 ? breedParts[1] : breedParts[0];
+        const subbreed = breedParts.length > 1 ? breedParts[0] : "";
+        return {
+          id: index,
+          image: dog,
+          breed: breed,
+          subbreed: subbreed
+        }
+      });
+      setData(formattedDogs);
     }
     fetchRandomDogs().then(()=>console.log("dogs sucessfully fetched"))
     .catch((e)=>console.log("this happened",e));
   }, []);
 
-
-  // Fetch list of all dog breeds
-  useEffect(() => {
-    async function fetchBreeds(){
-      const rawData = await fetch("");
-      const {results} : {results: Dog[]} = await rawData.json();
-      const breedList = Object.keys(results);
-      setBreeds(breedList);
-      setSelectedBreed(breedList[0])
-    }
-    fetchBreeds().then(()=>console.log("dogs sucessfully fetched"))
-    .catch((e)=>console.log("this happened",e));
-  }, []);
-
-
-  // Fetch images of the selected breed 
-  useEffect(() => {
-    async function fetchDogBreed(){
-      if (!selectedBreed) return;
-      const rawData = await fetch("");
-      const {results} : {results: Dog[]} = await rawData.json();
-      const selectedImages = results.slice(0,5).map((img: string, index: number)=>({
-        id: index,
-        image: img
-      }));
-      setData(selectedImages);
-    }
-    fetchDogBreed().then(()=>console.log("dogs sucessfully fetched"))
-    .catch((e)=>console.log("this happened",e));
-  }, []);
-
-
-
-
   return (
-    <>
-      {
-        data.map((character)=>
-          <BluePrint data = {character} />
-        )
-      }
-    
-    </>
+    <ParentDiv>
+      <h1>Random Dogs</h1>
+      <DogGallery data = {data} />
+    </ParentDiv>
   )
 }
 
-export default App

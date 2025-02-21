@@ -31,11 +31,13 @@ const DogImage = styled.img`
 `;
 
 const StyledH2 = styled.h2`
-    min-width: 25%;
-    max-width: 100%;
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    font-size: calc(0.2em + 2vw);
     color: rgb(239,235,231);
 `;
 const StyledP = styled.p`
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    font-size: calc(0.2em + 1vw);
     color: rgb(239,235,231);
 `;
 

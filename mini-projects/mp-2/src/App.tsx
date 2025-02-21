@@ -11,6 +11,9 @@ const ParentDiv=styled.div`
     border-radius: 10px;
 `;
 const StyledH1 = styled.h1`
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    font-size: calc(2em + 4vw);
+    letter-spacing: 0.1em;
     text-align: center;
     color: rgb(239,235,231);
     background-color: rgb(138,153,168);

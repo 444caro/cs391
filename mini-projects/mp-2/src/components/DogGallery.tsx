@@ -36,8 +36,7 @@ export default function DogGallery(props:{data:Dog[]}){
                 <SingleDogDiv key = {dog.id}>
                     <h1> {dog.breed.toUpperCase()}</h1>
                     <DogImage src={dog.image} alt={`Image of ${dog.breed}`}/>
-                    {dog.subbreed && <p>Sub-breed: {dog.subbreed}</p>}
-
+                    {dog.subbreed && <p>Sub-breed: {dog.subbreed.toUpperCase()}</p>}
                 </SingleDogDiv>
             ))}
         </AllDogsDiv>

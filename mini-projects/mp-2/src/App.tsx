@@ -20,8 +20,8 @@ export default function App() {
       const formattedDogs: Dog[] = results.message.map((dog: string, index: number) => {
         const parts = dog.split("/");
         const breedParts = parts[4].split("-");
-        const breed = breedParts.length > 1 ? breedParts[1] : breedParts[0];
-        const subbreed = breedParts.length > 1 ? breedParts[0] : "";
+        const breed = breedParts[0];
+        const subbreed = breedParts.length > 1 ? breedParts[1] : "";   //get subbreed if it exists
         return {
           id: index,
           image: dog,

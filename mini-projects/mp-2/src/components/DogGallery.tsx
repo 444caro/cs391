@@ -12,11 +12,10 @@ const SingleDogDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 30%;
-    padding: 15px;
+    max-width: 25%;
+    padding: 10px;
     margin: 10px;
-    border: 5px darkred solid;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(138,153,168);
     text-align: center;
     border-radius: 10px;
 `;
@@ -34,6 +33,10 @@ const DogImage = styled.img`
 const StyledH2 = styled.h2`
     min-width: 25%;
     max-width: 100%;
+    color: rgb(239,235,231);
+`;
+const StyledP = styled.p`
+    color: rgb(239,235,231);
 `;
 
 export default function DogGallery(props:{data:Dog[]}){
@@ -43,7 +46,7 @@ export default function DogGallery(props:{data:Dog[]}){
                 <SingleDogDiv key = {dog.id}>
                     <StyledH2> {dog.breed.toUpperCase()}</StyledH2>
                     <DogImage src={dog.image} alt={`Image of ${dog.breed}`}/>
-                    {dog.subbreed && <p>Sub-breed: {dog.subbreed.toUpperCase()}</p>}
+                    {dog.subbreed && <StyledP>Sub-breed: {dog.subbreed.toUpperCase()}</StyledP>}
                 </SingleDogDiv>
             ))}
         </AllDogsDiv>

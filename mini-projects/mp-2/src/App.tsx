@@ -6,11 +6,18 @@ import {Dog} from "./interfaces/Dog.ts";
 const ParentDiv=styled.div`
     width: 80vw;
     margin: auto;
-    border: 5px darkgoldenrod solid;
-    background-color: bisque;
+    border: 10px rgb(168,153,138) solid;
+    background-color: rgb(214,205,197);
+    border-radius: 10px;
 `;
 const StyledH1 = styled.h1`
     text-align: center;
+    color: rgb(239,235,231);
+    background-color: rgb(138,153,168);
+    margin: 2vw;
+    padding: 2vw;
+    border: 5px rgb(168,153,138) solid;
+    border-radius: 10px;
 `;
 
 export default function App() {

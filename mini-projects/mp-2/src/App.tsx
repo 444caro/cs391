@@ -7,6 +7,10 @@ const ParentDiv=styled.div`
     width: 80vw;
     margin: auto;
     border: 5px darkgoldenrod solid;
+    background-color: bisque;
+`;
+const StyledH1 = styled.h1`
+    text-align: center;
 `;
 
 export default function App() {
@@ -37,7 +41,7 @@ export default function App() {
 
   return (
     <ParentDiv>
-      <h1>Random Dogs</h1>
+      <StyledH1>Random Dogs</StyledH1>
       <DogGallery data = {data} />
     </ParentDiv>
   )

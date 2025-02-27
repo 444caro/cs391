@@ -1,6 +1,6 @@
 
 import './App.css'
-import ArtworksListContent from './components/artworks-list-content';
+import ArtworksListContent from './components/ArtworksListContent';
 
 function App() {
 

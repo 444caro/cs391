@@ -1,35 +1,68 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import styled from 'styled-components';
 
-function App() {
-  const [count, setCount] = useState(0)
+import Header from './components/Header.tsx';
+import Nav from './components/Nav.tsx';
+import Footer from './components/Footer.tsx';
 
+import Home from './components/Home.tsx';
+import Projects from './components/Projects.tsx';
+import Education from './components/Education.tsx';
+import Experience from './components/Experience.tsx';
+import Volunteer from './components/Volunteer.tsx';
+import Skills from './components/Skills.tsx';
+import Contact from './components/Contact.tsx';
+
+
+const PageWrapper = styled.div`
+    width: 95vw;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+`
+const ContainerLayout = styled.div`
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: rgb(226, 200, 167);
+`
+
+function Root() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <PageWrapper>
+      <Header />
+      <ContainerLayout>
+          <Nav />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/education" element={<Education />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/volunteer" element={<Volunteer />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+      </ContainerLayout>
+      <Footer />
+    </PageWrapper>
+
+  );
 }
 
+
+const router = createBrowserRouter(
+  [{path: "*", Component: Root}]
+);
+
+function App() {
+  return (
+    <>  
+      <RouterProvider router={router}/>
+    </>
+  );
+}
 export default App

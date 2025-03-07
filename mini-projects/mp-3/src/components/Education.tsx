@@ -1,13 +1,9 @@
 import styled from 'styled-components';
+import StyledMain from './ui-components/StyledMain.tsx';
+import MainText from './ui-components/MainText.tsx';
+import StyledH2 from './ui-components/StyledH2.tsx';
+import StyledP from './ui-components/StyledP.tsx';
 
-const StyledMain = styled.main`
-    display: flex;
-    flex-direction: column;
-    width:70%;
-    height: 100vh;
-    background-color: rgb(226, 200, 167);
-    padding-bottom: 0;
-`
 const EducationContainer = styled.div`
     width: 100%;
     display: flex;
@@ -25,29 +21,29 @@ const SchoolLogos = styled.img`
 export default function Education() {
     return(
         <StyledMain>
-            <h2> Education </h2>
+            <StyledH2> Education </StyledH2>
             <EducationContainer>
                 <EducationImages>
                     <SchoolLogos src = "assets/pennington-logo.png" alt = "The Pennington School Logo" />
                     <SchoolLogos src = "assets/boston-university-logo.png" alt = "Boston University Logo" />
                 </EducationImages>
-                <div id = "main-text">
-                    <p> I graduated from The Pennington School in 2021 with a highschool diploma.</p>
-                    <p> I am currently a student at Boston University studying computer science. I will be graduating in the spring of 2025. </p>
-                    <p> I have taken a variety of courses in computer science including: </p>
+                <MainText>
+                    <StyledP> I graduated from The Pennington School in 2021 with a highschool diploma.</StyledP>
+                    <StyledP> I am currently a student at Boston University studying computer science. I will be graduating in the spring of 2025. </StyledP>
+                    <StyledP> I have taken a variety of courses in computer science including: </StyledP>
                     <ul>
-                        <li> <p>Introduction to Computer Science </p></li>
-                        <li> <p>Data Structures</p> </li>
-                        <li> <p>Combinatoric Structures</p> </li>
-                        <li> <p>Algorithm Analysis</p> </li>
-                        <li> <p>Computer Systems</p> </li>
-                        <li> <p>Distributed Systems</p> </li>
-                        <li> <p>Theory of Computation</p>  </li>
-                        <li> <p>Software Engineering</p> </li>
-                        <li><p> Full-Stack Application Design and Developement </p></li>
-                        <li><p> Introduction to Artificial Intelligence </p></li>
+                        <li> <StyledP>Introduction to Computer Science </StyledP></li>
+                        <li> <StyledP>Data Structures</StyledP> </li>
+                        <li> <StyledP>Combinatoric Structures</StyledP> </li>
+                        <li> <StyledP>Algorithm Analysis</StyledP> </li>
+                        <li> <StyledP>Computer Systems</StyledP> </li>
+                        <li> <StyledP>Distributed Systems</StyledP> </li>
+                        <li> <StyledP>Theory of Computation</StyledP>  </li>
+                        <li> <StyledP>Software Engineering</StyledP> </li>
+                        <li><StyledP> Full-Stack Application Design and Developement </StyledP></li>
+                        <li><StyledP> Introduction to Artificial Intelligence </StyledP></li>
                     </ul>
-                </div>
+                </MainText>
             </EducationContainer>
         </StyledMain>
     )

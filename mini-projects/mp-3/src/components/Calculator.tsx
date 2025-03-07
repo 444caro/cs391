@@ -5,7 +5,7 @@ const CalculatorContainer = styled.div`
     color: rgb(34, 42, 19);  
     font-size: calc(5px + 1.5vw);
     margin: 2vh 2vw;
-    line-height: 15px +1vh;
+    line-height: calc(15px +1vh);
     text-align: center;
 `
 const CalculatorInput = styled.input`

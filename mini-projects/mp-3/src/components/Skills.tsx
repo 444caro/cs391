@@ -1,36 +1,32 @@
 import styled from 'styled-components';
+import StyledMain from './ui-components/StyledMain.tsx';
+import MainText from './ui-components/MainText.tsx';
+import StyledH2 from './ui-components/StyledH2.tsx';
+import StyledP from './ui-components/StyledP.tsx';
 
-const StyledMain = styled.main`
-    display: flex;
-    flex-direction: column;
-    width:70%;
-    height: 100vh;
-    background-color: rgb(226, 200, 167);
-    padding-bottom: 0;
-`
 const StyledSkills = styled.div`
 `
 
 export default function Skills(){
     return(
         <StyledMain>
-            <h2> Skills </h2>
-            <div id = "main-text">
-                <p> This page contains a list of my technical and practical skills. </p>
-            </div>
+            <StyledH2> Skills </StyledH2>
+            <MainText>
+                <StyledP> This page contains a list of my technical and practical skills. </StyledP>
+            </MainText>
             <StyledSkills>
                 <ul>
-                    <li><p> Proficient in Java, Python, Golang, HTML/CSS, and JavaScript. </p></li>
-                    <li><p> Experience with MongoDB, APIs, and SQL. </p></li>
-                    <li><p> Familiar with React, Node.js, and Express. </p></li>
-                    <li><p> Knowledgeable in data structures and algorithms. </p></li>
-                    <li><p> Experience with full-stack application design and development. </p></li>
-                    <li><p> Experience with software engineering and distributed systems. </p></li>
-                    <li><p> Experience with theory of computation and combinatoric structures. </p></li>
-                    <li><p> Experience with artificial intelligence and machine learning. </p></li>
-                    <li><p>Proficient in customer relationship management and sales techniques. </p></li>
-                    <li><p>Skilled in data entry, document management, and the use of KeyStoneB2B and TitleExpress. </p></li>
-                    <li><p>Fluent in both English and French. </p></li>
+                    <li><StyledP> Proficient in Java, Python, Golang, HTML/CSS, and JavaScript. </StyledP></li>
+                    <li><StyledP> Experience with MongoDB, APIs, and SQL. </StyledP></li>
+                    <li><StyledP> Familiar with React, Node.js, and Express. </StyledP></li>
+                    <li><StyledP> Knowledgeable in data structures and algorithms. </StyledP></li>
+                    <li><StyledP> Experience with full-stack application design and development. </StyledP></li>
+                    <li><StyledP> Experience with software engineering and distributed systems. </StyledP></li>
+                    <li><StyledP> Experience with theory of computation and combinatoric structures. </StyledP></li>
+                    <li><StyledP> Experience with artificial intelligence and machine learning. </StyledP></li>
+                    <li><StyledP>Proficient in customer relationship management and sales techniques. </StyledP></li>
+                    <li><StyledP>Skilled in data entry, document management, and the use of KeyStoneB2B and TitleExpress. </StyledP></li>
+                    <li><StyledP>Fluent in both English and French. </StyledP></li>
                 </ul>
             </StyledSkills>
         </StyledMain>

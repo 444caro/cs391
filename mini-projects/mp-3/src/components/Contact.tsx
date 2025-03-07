@@ -1,13 +1,9 @@
 import styled from 'styled-components';
+import StyledMain from './ui-components/StyledMain.tsx';
+import MainText from './ui-components/MainText.tsx';
+import StyledH2 from './ui-components/StyledH2.tsx';
+import StyledP from './ui-components/StyledP.tsx';
 
-const StyledMain = styled.main`
-    display: flex;
-    flex-direction: column;
-    width:70%;
-    height: 100vh;
-    background-color: rgb(226, 200, 167);
-    padding-bottom: 0;
-`
 const ContactContainer = styled.div`
     /* 2 column layout */
     width: 100%;
@@ -26,26 +22,26 @@ const ContactInfoImg = styled.img`
 export default function Contact(){
     return(
         <StyledMain>
-            <h2> Contact Information </h2>
-            <div id = "main-text">
-                <p> Below are a few different ways to get in contact with me. </p>
-            </div>
+            <StyledH2> Contact Information </StyledH2>
+            <MainText>
+                <StyledP> Below are a few different ways to get in contact with me. </StyledP>
+            </MainText>
             <ContactContainer>
                 <ContactInfo>
                     <ContactInfoImg src = "assets/email.png" alt = "Email Logo" />
-                    <p> <strong>Email:</strong> cjm72@bu.edu </p>
+                    <StyledP> <strong>Email:</strong> cjm72@bu.edu </StyledP>
                 </ContactInfo>
                 <ContactInfo>
                     <ContactInfoImg src = "assets/phone.png" alt = "Phone Logo" />
-                    <p> <strong>Phone:</strong> 609-555-5555 </p>
+                    <StyledP> <strong>Phone:</strong> 609-555-5555 </StyledP>
                 </ContactInfo>
                 <ContactInfo>
                     <ContactInfoImg src = "assets/linkedin.png" alt = "Linkedin Logo" />
-                    <p> <strong>Linkedin:</strong> <a href = "https://linkedin.com/in/caroline-muscara-928b94211"> Caroline Muscara </a> </p>
+                    <StyledP> <strong>Linkedin:</strong> <a href = "https://linkedin.com/in/caroline-muscara-928b94211"> Caroline Muscara </a> </StyledP>
                 </ContactInfo>
                 <ContactInfo>
                     <ContactInfoImg src = "assets/github.png" alt = "Github Logo" />
-                    <p> <strong>Github:</strong> <a href = "https://github.com/444caro"> 444caro </a> </p>
+                    <StyledP> <strong>Github:</strong> <a href = "https://github.com/444caro"> 444caro </a> </StyledP>
                 </ContactInfo>
             </ContactContainer>
         </StyledMain>

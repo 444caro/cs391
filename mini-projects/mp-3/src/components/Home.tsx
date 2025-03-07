@@ -1,13 +1,9 @@
 import styled from 'styled-components';
+import StyledMain from './ui-components/StyledMain.tsx';
+import MainText from './ui-components/MainText.tsx';
+import StyledH2 from './ui-components/StyledH2.tsx';
+import StyledP from './ui-components/StyledP.tsx';
 
-const StyledMain = styled.main`
-    display: flex;
-    flex-direction: column;
-    width:70%;
-    height: 100vh;
-    background-color: rgb(226, 200, 167);
-    padding-bottom: 0;
-`
 
 const HomeContainer = styled.div`
     /* 2 column layout */
@@ -24,17 +20,17 @@ const ProfileImage = styled.img`
 export default function Home(){
     return(
         <StyledMain>
-            <h2> Home </h2>
+            <StyledH2> Home </StyledH2>
             <HomeContainer>
-                <ProfileImage src = "images/profile-image.jpg" alt = "Caroline Muscara Profile Picture" />
-                <div id = "main-text">
-                    <p> My name is Caroline Muscara and I am a student at the Boston University studying computer science.</p> 
-                    <p> I will be graduating in the spring and am currently looking for future job or internship opportunities. </p>
-                </div>
+                <ProfileImage src = "./assets/profile-image.jpg" alt = "Caroline Muscara Profile Picture" />
+                <MainText>
+                    <StyledP> My name is Caroline Muscara and I am a student at the Boston University studying computer science.</StyledP> 
+                    <StyledP> I will be graduating in the spring and am currently looking for future job or internship opportunities. </StyledP>
+                </MainText>
 
             </HomeContainer>
-            <p> Welcome to my website which showcases my resume, click on the links above to learn more about me. </p>
-            <p> Feel free to check out my <a href = "https://linkedin.com/in/caroline-muscara-928b94211">Linkedin profile</a> if it interests you. </p>
+            <StyledP> Welcome to my website which showcases my resume, click on the links above to learn more about me. </StyledP>
+            <StyledP> Feel free to check out my <a href = "https://linkedin.com/in/caroline-muscara-928b94211">Linkedin profile</a> if it interests you. </StyledP>
         </StyledMain>
 
     )

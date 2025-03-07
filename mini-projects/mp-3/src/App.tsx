@@ -21,6 +21,9 @@ const PageWrapper = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    @media (max-width: 900px){
+      width: 90vw;
+    }
 `
 const ContainerLayout = styled.div`
     width: 100%;
@@ -29,6 +32,10 @@ const ContainerLayout = styled.div`
     flex-direction: row;
     position: relative;
     background-color: rgb(226, 200, 167);
+    @media (max-width: 750px){
+      flex-direction: column;
+      align-items: center;
+    }
 `
 
 function Root() {

@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 const StyledNav = styled.nav`
     width: 30%;
+    @media (max-width: 750px){
+        width: 100%;
+    }
+    @media (min-width: 751px){
+        width: 30%;
+    }
 `
 
 const StyledUl = styled.ul`
@@ -14,6 +20,16 @@ const StyledUl = styled.ul`
     text-align: center;
     list-style: none;
     padding-left: 0;
+    @media (max-width: 900px){
+        flex-direction: row;
+        justify-content: center;
+    }
+    @media (max-width: 750px){
+        flex-direction: row;
+    }
+    @media (min-width: 751px){
+        flex-direction: column;
+    }
 `
 const StyledLi = styled.li`
     font-size: calc(5px + 1.5vw);

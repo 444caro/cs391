@@ -7,6 +7,15 @@ const StyledHeader = styled.header`
     padding: 2vh 2vw;
     background-color: darkolivegreen;
     color: rgb(226, 200, 167);
+    @ media (max-width: 750px){
+        text-align: center;
+    }
+    @ media (max-width: 900px){
+        text-align: center;
+    }   
+    @ media (min-width: 751px){
+        text-align: left;
+    }
 `
 const StyledH1 = styled.h1`
     font-size: calc(20px + 2vw);

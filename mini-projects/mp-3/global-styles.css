@@ -6,3 +6,12 @@
 body{
     padding: 2vh 2vw;
 }
+
+/* RESPONSIVE DESIGN */
+/* Media Query for Screens Smaller than 900px */
+@media screen and (max-width: 900px) {
+    /* Global Styles */
+    body {
+        padding: 2vh 5vw;
+    }
+}

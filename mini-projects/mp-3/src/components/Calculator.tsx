@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import StyledH2 from './ui-components/StyledH2';
 import { useState } from 'react';
 
 const CalculatorContainer = styled.div`
@@ -28,6 +29,11 @@ const CalculatorOutput = styled.div`
     margin: 2vh 2vw;
     padding: 1vh 1vw;
     text-align: center;
+`
+const StyledLabel = styled.label`
+    font-size: calc(5px + 1.5vw);
+    margin: 2vh 1.5vw;
+    line-height: calc(15px +1vh); 
 `
 
 
@@ -94,15 +100,17 @@ export default function Calculator() {
 
     return(
         <CalculatorContainer>
-            <h2> Calculator</h2>
-            <CalculatorInput type = "text" value = {firstInput} onChange = {(e) => setFirstInput(e.target.value)} />
-            <CalculatorInput type = "text" value = {secondInput} onChange = {(e) => setSecondInput(e.target.value)} />
+            <StyledH2> Calculator</StyledH2>
+            <StyledLabel htmlFor= "first"> First Number: </StyledLabel>
+            <CalculatorInput id = "first" type = "text" value = {firstInput} onChange = {(e) => setFirstInput(e.target.value)} /> <br/>
+            <StyledLabel htmlFor= "second"> Second Number: </StyledLabel>
+            <CalculatorInput id = "second" type = "text" value = {secondInput} onChange = {(e) => setSecondInput(e.target.value)} /><br/>
             <CalculatorButton onClick = {addition}> + </CalculatorButton>
             <CalculatorButton onClick = {subtraction}> - </CalculatorButton>
             <CalculatorButton onClick = {multiplication}> * </CalculatorButton>
             <CalculatorButton onClick = {division}> / </CalculatorButton>
-            <CalculatorButton onClick = {power}> ** </CalculatorButton>
-            <CalculatorButton onClick = {clearBoxes}> Clear </CalculatorButton>
+            <CalculatorButton onClick = {power}> ** </CalculatorButton><br/>
+            <CalculatorButton onClick = {clearBoxes}> Clear </CalculatorButton> 
             <CalculatorOutput> {output} </CalculatorOutput>
         </CalculatorContainer>
     )

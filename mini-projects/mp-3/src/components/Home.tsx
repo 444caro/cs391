@@ -22,7 +22,7 @@ export default function Home(){
         <StyledMain>
             <StyledH2> Home </StyledH2>
             <HomeContainer>
-                <ProfileImage src = "./assets/profile-image.jpg" alt = "Caroline Muscara Profile Picture" />
+                <ProfileImage src = "/profile-image.jpg" alt = "Caroline Muscara Profile Picture" />
                 <MainText>
                     <StyledP> My name is Caroline Muscara and I am a student at the Boston University studying computer science.</StyledP> 
                     <StyledP> I will be graduating in the spring and am currently looking for future job or internship opportunities. </StyledP>

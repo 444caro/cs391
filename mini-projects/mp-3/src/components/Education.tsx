@@ -24,8 +24,8 @@ export default function Education() {
             <StyledH2> Education </StyledH2>
             <EducationContainer>
                 <EducationImages>
-                    <SchoolLogos src = "assets/pennington-logo.png" alt = "The Pennington School Logo" />
-                    <SchoolLogos src = "assets/boston-university-logo.png" alt = "Boston University Logo" />
+                    <SchoolLogos src = "/pennington-logo.png" alt = "The Pennington School Logo" />
+                    <SchoolLogos src = "/boston-university-logo.png" alt = "Boston University Logo" />
                 </EducationImages>
                 <MainText>
                     <StyledP> I graduated from The Pennington School in 2021 with a highschool diploma.</StyledP>

@@ -28,19 +28,19 @@ export default function Contact(){
             </MainText>
             <ContactContainer>
                 <ContactInfo>
-                    <ContactInfoImg src = "assets/email.png" alt = "Email Logo" />
+                    <ContactInfoImg src = "/email.png" alt = "Email Logo" />
                     <StyledP> <strong>Email:</strong> cjm72@bu.edu </StyledP>
                 </ContactInfo>
                 <ContactInfo>
-                    <ContactInfoImg src = "assets/phone.png" alt = "Phone Logo" />
+                    <ContactInfoImg src = "/phone.png" alt = "Phone Logo" />
                     <StyledP> <strong>Phone:</strong> 609-555-5555 </StyledP>
                 </ContactInfo>
                 <ContactInfo>
-                    <ContactInfoImg src = "assets/linkedin.png" alt = "Linkedin Logo" />
+                    <ContactInfoImg src = "/linkedin.png" alt = "Linkedin Logo" />
                     <StyledP> <strong>Linkedin:</strong> <a href = "https://linkedin.com/in/caroline-muscara-928b94211"> Caroline Muscara </a> </StyledP>
                 </ContactInfo>
                 <ContactInfo>
-                    <ContactInfoImg src = "assets/github.png" alt = "Github Logo" />
+                    <ContactInfoImg src = "/github.png" alt = "Github Logo" />
                     <StyledP> <strong>Github:</strong> <a href = "https://github.com/444caro"> 444caro </a> </StyledP>
                 </ContactInfo>
             </ContactContainer>

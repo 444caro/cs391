@@ -21,8 +21,8 @@ const CalculatorButton = styled.button`
     color: rgb(34, 42, 19);
     font-weight: bolder;
 `
-const CalculatorOutput = styled.div`
-    color: darkolivegreen;
+const CalculatorOutput = styled.div<{color: string}>`
+    color: ${(props) => props.color};
     font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
     font-size: calc(20px + 5vw);
     letter-spacing: 0.2em;
@@ -41,21 +41,20 @@ export default function Calculator() {
     const [firstInput, setFirstInput] = useState("");
     const [secondInput, setSecondInput] = useState("");
     const [output, setOutput] = useState("");
+    const [outputColor, setOutputColor] = useState("darkolivegreen");
 
     function clearBoxes() {
         setFirstInput("");
         setSecondInput("");
         setOutput("");
+        setOutputColor("darkolivegreen");
     }
 
-    function checkNegative(){
-        let result = output;
+    function checkNegative(result: Number){
         if (Number(result) < 0){
-            /* fill in later, i forget 
-            Output style color red */
+            setOutputColor("red");
         } else {
-            /* fill in later, i forget 
-             Output style color dakr green*/
+            setOutputColor("darkolivegreen");
         }
     }
 
@@ -67,35 +66,35 @@ export default function Calculator() {
             result *= Number(num1);
         }
         setOutput(String(result));
-        checkNegative();
+        checkNegative(result);
     }
     function addition(){
         const num1 = Number(firstInput);
         const num2 = Number(secondInput);
         let result = num1 + num2;
         setOutput(String(result));
-        checkNegative();
+        checkNegative(result);
     }
     function subtraction(){
         const num1 = Number(firstInput);
         const num2 = Number(secondInput);
         let result = num1 - num2;
         setOutput(String(result));
-        checkNegative();
+        checkNegative(result);
     }
     function multiplication(){
         const num1 = Number(firstInput);
         const num2 = Number(secondInput);
         let result = num1 * num2;
         setOutput(String(result));
-        checkNegative();
+        checkNegative(result);
     }
     function division(){
         const num1 = Number(firstInput);
         const num2 = Number(secondInput);
         let result = num1 / num2;
         setOutput(String(result));
-        checkNegative();
+        checkNegative(result);
     }
 
     return(
@@ -111,7 +110,7 @@ export default function Calculator() {
             <CalculatorButton onClick = {division}> / </CalculatorButton>
             <CalculatorButton onClick = {power}> ** </CalculatorButton><br/>
             <CalculatorButton onClick = {clearBoxes}> Clear </CalculatorButton> 
-            <CalculatorOutput> {output} </CalculatorOutput>
+            <CalculatorOutput color ={outputColor}> {output} </CalculatorOutput>
         </CalculatorContainer>
     )
 }

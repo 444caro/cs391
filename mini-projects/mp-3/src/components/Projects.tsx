@@ -5,6 +5,7 @@ import StyledH2 from './ui-components/StyledH2.tsx';
 import StyledP from './ui-components/StyledP.tsx';
 import StyledAnchor from './ui-components/StyledAnchor.tsx';
 import Calculator from './Calculator';
+import { useEffect } from 'react';
 
 
 const StyledProjects = styled.div`
@@ -15,6 +16,9 @@ const StyledProjects = styled.div`
 `
 
 export default function Projects(){
+    useEffect(() => {
+        document.title = "Projects | Resume";
+    }, []);
     return(
         <StyledMain>
             <StyledH2> Projects </StyledH2>

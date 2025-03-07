@@ -3,6 +3,7 @@ import StyledMain from './ui-components/StyledMain.tsx';
 import MainText from './ui-components/MainText.tsx';
 import StyledH2 from './ui-components/StyledH2.tsx';
 import StyledP from './ui-components/StyledP.tsx';
+import { useEffect } from 'react';
 
 const EducationContainer = styled.div`
     width: 100%;
@@ -19,6 +20,9 @@ const SchoolLogos = styled.img`
 `
 
 export default function Education() {
+    useEffect(() => {
+        document.title = "Education | Resume";
+    }, []);
     return(
         <StyledMain>
             <StyledH2> Education </StyledH2>

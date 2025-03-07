@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useEffect } from 'react';
 import StyledMain from './ui-components/StyledMain.tsx';
 import MainText from './ui-components/MainText.tsx';
 import StyledH2 from './ui-components/StyledH2.tsx';
@@ -21,6 +22,9 @@ const ContactInfoImg = styled.img`
 `
 
 export default function Contact(){
+    useEffect(() => {
+        document.title = "Contact | Resume";
+    }, []);
     return(
         <StyledMain>
             <StyledH2> Contact Information </StyledH2>

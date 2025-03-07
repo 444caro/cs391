@@ -3,6 +3,7 @@ import StyledMain from './ui-components/StyledMain.tsx';
 import MainText from './ui-components/MainText.tsx';
 import StyledH2 from './ui-components/StyledH2.tsx';
 import StyledP from './ui-components/StyledP.tsx';
+import { useEffect } from 'react';
 
 const PastExperience = styled.div`
     margin: 1vh 1vw;
@@ -29,6 +30,9 @@ const StyledH3 = styled.h3`
 `
 
 export default function Volunteer(){
+    useEffect(() => {
+        document.title = "Volunteer | Resume";
+    }, []);
     return(
         <StyledMain>
             <StyledH2> Volunteer Experience</StyledH2>

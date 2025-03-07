@@ -4,6 +4,7 @@ import MainText from './ui-components/MainText.tsx';
 import StyledH2 from './ui-components/StyledH2.tsx';
 import StyledP from './ui-components/StyledP.tsx';
 import StyledAnchor from './ui-components/StyledAnchor.tsx';
+import { useEffect } from 'react';
 
 
 const HomeContainer = styled.div`
@@ -19,6 +20,9 @@ const ProfileImage = styled.img`
 `
 
 export default function Home(){
+    useEffect(() => {
+        document.title = "Home | Resume";
+    }, []);
     return(
         <StyledMain>
             <StyledH2> Home </StyledH2>

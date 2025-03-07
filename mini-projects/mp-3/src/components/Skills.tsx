@@ -3,11 +3,15 @@ import StyledMain from './ui-components/StyledMain.tsx';
 import MainText from './ui-components/MainText.tsx';
 import StyledH2 from './ui-components/StyledH2.tsx';
 import StyledP from './ui-components/StyledP.tsx';
+import { useEffect } from 'react';
 
 const StyledSkills = styled.div`
 `
 
 export default function Skills(){
+    useEffect(() => {
+        document.title = "Skills | Resume";
+    }, []);
     return(
         <StyledMain>
             <StyledH2> Skills </StyledH2>

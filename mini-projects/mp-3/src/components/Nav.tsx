@@ -5,6 +5,7 @@ const StyledNav = styled.nav`
     width: 30%;
     @media (max-width: 750px){
         width: 100%;
+        border: 10px solid rgb(125, 151, 125);
     }
     @media (min-width: 751px){
         width: 30%;
@@ -26,6 +27,7 @@ const StyledUl = styled.ul`
     }
     @media (max-width: 750px){
         flex-direction: row;
+        background-color: darkolivegreen;
     }
     @media (min-width: 751px){
         flex-direction: column;

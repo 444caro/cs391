@@ -10,11 +10,18 @@ const StyledFooter = styled.footer`
     display: flex;
     justify-content: space-evenly;
 `
+const StyledLink = styled(Link)`
+    text-decoration: underline dotted;
+    color: rgb(226, 200, 167);
+    &:hover{
+        text-decoration: underline solid;
+    }
+`
 
 export default function Footer() {
     return (
         <StyledFooter>
-            <StyledP> All Rights Reserved by Caroline Muscara <Link to={'/credits'}> Credits</Link> &copy;</StyledP>
+            <StyledP> All Rights Reserved by Caroline Muscara <StyledLink to={'/credits'}> Credits</StyledLink> &copy;</StyledP>
         </StyledFooter>
     )
 }

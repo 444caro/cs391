@@ -3,6 +3,7 @@ import StyledMain from './ui-components/StyledMain.tsx';
 import MainText from './ui-components/MainText.tsx';
 import StyledH2 from './ui-components/StyledH2.tsx';
 import StyledP from './ui-components/StyledP.tsx';
+import StyledAnchor from './ui-components/StyledAnchor.tsx';
 
 
 const HomeContainer = styled.div`
@@ -30,7 +31,7 @@ export default function Home(){
 
             </HomeContainer>
             <StyledP> Welcome to my website which showcases my resume, click on the links above to learn more about me. </StyledP>
-            <StyledP> Feel free to check out my <a href = "https://linkedin.com/in/caroline-muscara-928b94211">Linkedin profile</a> if it interests you. </StyledP>
+            <StyledP> Feel free to check out my <StyledAnchor href = "https://linkedin.com/in/caroline-muscara-928b94211">Linkedin profile</StyledAnchor> if it interests you. </StyledP>
         </StyledMain>
 
     )

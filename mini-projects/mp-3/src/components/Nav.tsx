@@ -42,6 +42,9 @@ const StyledLi = styled.li`
 const StyledLink = styled(Link)`
     text-decoration: underline dotted;
     color: rgb(226, 200, 167);
+    &:hover{
+        text-decoration: underline solid;
+    }
 `
 
 export default function Nav() {

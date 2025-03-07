@@ -3,6 +3,7 @@ import StyledMain from './ui-components/StyledMain.tsx';
 import MainText from './ui-components/MainText.tsx';
 import StyledH2 from './ui-components/StyledH2.tsx';
 import StyledP from './ui-components/StyledP.tsx';
+import StyledAnchor from './ui-components/StyledAnchor.tsx';
 import Calculator from './Calculator';
 
 
@@ -22,9 +23,9 @@ export default function Projects(){
             </MainText>
             <StyledProjects>
                 <ul>
-                    <li><StyledP>A concert finder web application called <a href = "https://github.com/ivannadels/CS411-ConcertFinder"> Concert Compass</a>  that helps users locate concerts based on artist preferences and location using Java, Python, HTML/CSS, MongoDB, and APIs.</StyledP></li>
-                    <li><StyledP><a href = "https://github.com/rowanwhelan/Boston-Budget-Project">Boston Budgetary Analysis Project </a> where my group observed historical trends in Boston's budget data and created expectations for the upcoming fiscal year. We successfully uncovered patterns in Boston's budget allocation and spending strategies. </StyledP></li>
-                    <li><StyledP>A website called <a href = "">BloomBoard</a> where florists can share their arrangements and flower details with other florists. </StyledP></li>
+                    <li><StyledP>A concert finder web application called <StyledAnchor href = "https://github.com/ivannadels/CS411-ConcertFinder"> Concert Compass</StyledAnchor>  that helps users locate concerts based on artist preferences and location using Java, Python, HTML/CSS, MongoDB, and APIs.</StyledP></li>
+                    <li><StyledP><StyledAnchor href = "https://github.com/rowanwhelan/Boston-Budget-Project">Boston Budgetary Analysis Project </StyledAnchor> where my group observed historical trends in Boston's budget data and created expectations for the upcoming fiscal year. We successfully uncovered patterns in Boston's budget allocation and spending strategies. </StyledP></li>
+                    <li><StyledP>A website called <StyledAnchor href = "">BloomBoard</StyledAnchor> where florists can share their arrangements and flower details with other florists. </StyledP></li>
                 </ul>
             </StyledProjects>
             <Calculator />

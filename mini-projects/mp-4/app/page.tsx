@@ -1,7 +1,6 @@
 
-import { Cat } from '@/types';
 import  getCats from '@/lib/getCats';
-import CatDisplay from '@/components/CatDisplay';
+import CatGallery from '@/components/CatGallery';
 import styled from "styled-components";
 
 export default async function Home() {
@@ -14,9 +13,7 @@ export default async function Home() {
 
   return (
     <>
-    {cats.map((cat) => (
-      <CatDisplay key={cat.id} cat={cat} />
-    ))}
+    <CatGallery cats={cats} />
     </>
   );
 }

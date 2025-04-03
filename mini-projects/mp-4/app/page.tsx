@@ -1,19 +1,22 @@
-import { useEffect, useState} from 'react';
 
-export default function Home() {
-  const [cats, setCats] = useState<any[]>([]);
-  const [error, setError] = useState('');
-  useEffect(() => {
-    fetch('/api/cats')
-      .then((res) => res.json())
-      .then((data) => setCats(data))
-      .catch((err) => setError(err));
-  }, []);
-  if (error) {
-    return <div>Error: {error}</div>;
+import { Cat } from '@/types';
+import  getCats from '@/lib/getCats';
+import CatDisplay from '@/components/CatDisplay';
+import styled from "styled-components";
+
+export default async function Home() {
+  let cats = [];
+  try {
+    cats = await getCats();
+  } catch (error) {
+    return <div>Error: {(error as Error).message}</div>;
   }
+
   return (
     <>
+    {cats.map((cat) => (
+      <CatDisplay key={cat.id} cat={cat} />
+    ))}
     </>
   );
 }

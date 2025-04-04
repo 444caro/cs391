@@ -1,5 +1,6 @@
 import AboutCatGallery from "@/components/AboutCatGallery";
 import Nav from "@/components/Nav";
+import "../globals.css";
 
 export default function About() {
   return (

@@ -31,7 +31,7 @@ export default async function getCats(): Promise<Cat[]> {
       );
   
       if (!res.ok) {
-        throw new Error("Failed to fetch data");
+        throw new Error("Failed to fetch cats");
       }
   
       const data = await res.json();

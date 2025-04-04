@@ -1,6 +1,6 @@
 import  getCats from '@/lib/getCats';
-import CatGalleryWrapper from '@/components/CatGalleryWrapper';
-
+import CatGallery from '@/components/CatGallery';
+import Nav from '@/components/Nav';
 
 
 export default async function Home() {
@@ -10,6 +10,12 @@ export default async function Home() {
   } catch (error) {
     return <div>Error: {(error as Error).message}</div>;
   }
-
-  return <CatGalleryWrapper cats={cats} />;
+  return (
+    
+    <div className = "page-wrapper">
+      <Nav />
+      <h1> Cat Gallery </h1>
+      <CatGallery cats={cats} />
+    </div>
+  );
 }

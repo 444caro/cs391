@@ -1,7 +1,7 @@
-
 import  getCats from '@/lib/getCats';
-import CatGallery from '@/components/CatGallery';
-import styled from "styled-components";
+import CatGalleryWrapper from '@/components/CatGalleryWrapper';
+
+
 
 export default async function Home() {
   let cats = [];
@@ -11,9 +11,5 @@ export default async function Home() {
     return <div>Error: {(error as Error).message}</div>;
   }
 
-  return (
-    <>
-    <CatGallery cats={cats} />
-    </>
-  );
+  return <CatGalleryWrapper cats={cats} />;
 }

@@ -1,23 +1,36 @@
+'use client';
 import { Cat } from "@/types";
 import styled from "styled-components"; 
 
 const CatCard = styled.div`
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25%;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(138,153,168);
   text-align: center;
-  margin: 16px;
+  border-radius: 10px;
 `;
 const CatImage = styled.img`
-  max-width: 100%;
-  border-radius: 8px;
+  width: 95%;
+  max-width: 95%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
 `;
 const CatName = styled.h2`
-  font-size: 24px;
-  margin: 8px 0;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-size: calc(0.2em + 2vw);
+  color: rgb(239,235,231);
 `;
 const CatTemperament = styled.p`
-    font-size: 16px;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-size: calc(0.2em + 2vw);
+  color: rgb(239,235,231);
 `
 
 export default function CatDisplay({ cat }: { cat: Cat }) {

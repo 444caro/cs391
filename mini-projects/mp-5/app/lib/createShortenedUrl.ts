@@ -13,9 +13,9 @@ export default async function createShortenedUrl( originalUrl: string, aliasUrl:
         throw new Error("Alias URL already exists");
     }
     const collection = await getCollection(URL_COLLECTION);
-    const result = await collection.insertOne(ret);
+    const result = await collection.insertOne({...ret});
     if (!result.acknowledged) {
         throw new Error("Failed to create shortened URL");
     }
-    return ret;
+    return {...ret};
 }

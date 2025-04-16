@@ -1,5 +1,4 @@
 import getShortenedUrl from "@/app/lib/getShortenedUrl";
-import { get } from "http";
 import { redirect } from "next/navigation";
 
 export default async function Page({ params }: { params: Promise<{ alias: string }>; }) {

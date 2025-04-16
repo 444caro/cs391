@@ -5,45 +5,50 @@ import checkUrl from "@/app/lib/checkUrl";
 import createShortenedUrl from "@/app/lib/createShortenedUrl";
 
 const Container = styled.div`
-  max-width: 600px;
-  margin: 40px auto;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  max-width: 90%;
+  margin: 20px auto;
   padding: 24px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
+  text-align: left-center;
 `;
 
 const Label = styled.label`
+  color: rgb(51,51,51);
+  font-size: calc(7px + 1.5vw);
   font-weight: bold;
   margin-bottom: 6px;
 `;
 
 const Input = styled.input`
   padding: 10px;
+  padding-right: 50px;
   font-size: 16px;
 `;
 
 const Button = styled.button`
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
+  background-color:rgb(138,153,168);
+  color: rgb(239,235,231);
+  align-self: center;
+  padding: 30px;
+  font-size: calc(10px + 1.5vw);
   font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: rgb(80, 111, 143);
   }
 `;
 
 const ErrorMessage = styled.p`
-  color: red;
+  color: black;
   text-align: center;
   font-weight: bold;
 `;
@@ -51,12 +56,24 @@ const ErrorMessage = styled.p`
 const ResultWrapper = styled.div`
   text-align: center;
   margin-top: 20px;
+  padding: 10px;
+  border: 7px rgb(168,153,138) solid;
+  border-radius: 10px;
+`;
+
+const ResultText = styled.p`
+    color: rgb(51,51,51);
+    font-weight: bold;
 `;
 
 const ResultLink = styled.a`
-  color: #007bff;
-  text-decoration: underline;
-  word-break: break-all;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  color: rgb(80, 111, 143);
+  text-decoration: dotted underline;
+  font-weight: bold;
+  &:hover {
+    text-decoration:underline;
+  }
 `;
 
 
@@ -115,10 +132,10 @@ export default function UrlShortenerForm() {
             {error && <ErrorMessage>{error}</ErrorMessage>}
             {shortenedUrl && (
                 <ResultWrapper>
-                    <p> Your shortened URL: </p>
-                    <ResultLink href={`/${shortenedUrl}`} target="_blank" rel="noopener noreferrer">
+                    <ResultText> Your shortened URL: </ResultText>
+                    <ResultText><ResultLink href={`/${shortenedUrl}`} target="_blank" rel="noopener noreferrer">
                         {`/${shortenedUrl}`}
-                    </ResultLink>
+                    </ResultLink></ResultText>
                 </ResultWrapper>
             )}
         </Container>
